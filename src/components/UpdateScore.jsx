@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import socketIOClient from "socket.io-client";
 
-const socketURL = "http://localhost:3000";
+const socketURL = "https://scoreboard-server.onrender.com";
 const UpdateScore = ({ updateScore }) => {
   const [runs, setRuns] = useState(0);
   const [wicket, setWicket] = useState(false);
