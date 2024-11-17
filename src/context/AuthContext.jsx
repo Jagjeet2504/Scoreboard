@@ -11,9 +11,12 @@ const AuthContext = ({ children }) => {
 
   const checkAuth = async () => {
     try {
-      const { data } = await axios.get("http://localhost:3000/api/auth/me", {
-        withCredentials: true,
-      });
+      const { data } = await axios.get(
+        "https://scoreboard-server.onrender.com/api/auth/me",
+        {
+          withCredentials: true,
+        }
+      );
       setUser(data);
     } catch (error) {
       setUser(null);
@@ -24,7 +27,7 @@ const AuthContext = ({ children }) => {
 
   const login = async (email, password) => {
     const { data } = await axios.post(
-      "http://localhost:3000/api/auth/login",
+      "https://scoreboard-server.onrender.com/api/auth/login",
       {
         email,
         password,
@@ -38,7 +41,7 @@ const AuthContext = ({ children }) => {
   const register = async (name, email, password) => {
     console.log(name, email, password);
     const { data } = await axios.post(
-      "http://localhost:3000/api/auth/register",
+      "https://scoreboard-server.onrender.com/api/auth/register",
       {
         name,
         email,
@@ -52,7 +55,7 @@ const AuthContext = ({ children }) => {
 
   const logout = async () => {
     await axios.post(
-      "http://localhost:3000/api/auth/logout",
+      "https://scoreboard-server.onrender.com/api/auth/logout",
       {},
       { withCredentials: true }
     );

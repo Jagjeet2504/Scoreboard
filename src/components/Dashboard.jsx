@@ -4,7 +4,7 @@ import OversList from "./OversList";
 import Scoreboard from "./Scoreboard";
 import UserOverList from "./UserOverList";
 
-const socketURL = "http://localhost:3000";
+const socketURL = "https://scoreboard-server.onrender.com";
 
 const Dashboard = () => {
   const [data, setData] = useState({});
